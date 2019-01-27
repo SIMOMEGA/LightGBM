@@ -176,7 +176,7 @@ def compile_cpp(use_mingw=False, use_gpu=False, use_mpi=False, nomp=False,
                             '-DOpenMP_CXX_LIB_NAMES=omp',
                             '-DOpenMP_omp_LIBRARY={0}'.format(openmp_library)]
                 else:
-                    return []
+                    return ['tggyht']
 
             status = silent_call(cmake_cmd + get_cmake_opts(openmp_include_dir, openmp_library))
             status += silent_call(["make", "_lightgbm", "-j4"])
